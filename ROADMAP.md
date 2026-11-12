@@ -22,7 +22,8 @@
 - [ ] **Dono:** assistir ao v3 e aprovar o formato, ou pedir ajustes. Só então seguimos para o vídeo longo.
 - [ ] **Dono:** regravar a narração com o microfone, em ambiente abafado (a gravação atual tem ruído de fundo).
 - [ ] **Dono:** indicar 2 ou 3 canais de futebol que gosta, como referência de trilha e de visual.
-- [ ] **Claude:** avaliar o pacote comprado ("Máquina de Viralização") e dizer o que serve ao projeto.
+- [x] **Claude:** avaliar a skill do YouTube do pacote comprado (`docs/avaliacao-skill-youtube.md`).
+- [ ] **Dono:** enviar as skills de Instagram, TikTok e Vídeos Animados para avaliação.
 
 ## Fase 2 — Roteiro do piloto pronto para gravar
 
