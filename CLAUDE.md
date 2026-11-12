@@ -17,6 +17,7 @@ A automação serve à produção, nunca substitui a autoria. O YouTube desmonet
 - narração na voz do próprio dono (sem voz sintética);
 - estilo visual próprio e consistente, feito para o canal, sem moldes comprados;
 - o visual tem que ter cara de futebol (escudos, cores do clube), não de apresentação de negócios nem de ferramenta de IA;
+- **o futebol vem antes do número:** todo valor em dinheiro aparece ligado a um fato de campo (quem era o jogador, quantos jogos fez, o que o time ganhou ou perdeu com aquilo), para o torcedor poder julgar se o negócio foi bom ou ruim. Dívida e gráfico sozinhos são rasos (retorno do dono em 12/11/2026);
 - nada de copiar o formato de um vídeo que "estourou";
 - antes de automatizar uma etapa, perguntar: isso tira o toque humano que protege o canal? Se sim, automatiza-se o trabalho braçal e mantém-se a decisão com o dono.
 

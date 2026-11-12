@@ -22,7 +22,11 @@
 - [x] **Dono:** assistir ao v3. Primeiro retorno: a trilha de fundo não se ouvia.
 - [x] **Claude:** corte v4 com a trilha mais alta e mais presente nos médios (`demos/001-cruzeiro-corte-menos6-v4.mp4`).
 - [x] **Claude:** registrar o método aproveitado do pacote comprado (`docs/metodo-conteudo.md`).
-- [ ] **Dono:** dar o retorno completo do visual (v3/v4) e dizer se agora ouve a trilha. Aprovar o formato ou pedir ajustes.
+- [x] **Dono:** retorno do v3: falta contexto de futebol; está raso, só número e gráfico.
+- [x] **Claude:** pesquisar o volante e propor o texto v2 do corte, com currículo e desempenho em campo (`roteiros/001-cruzeiro/corte-menos6-texto-v2.md`).
+- [ ] **Dono:** conferir os pontos em aberto do texto v2 (principalmente o número de jogos), ajustar ao seu jeito de falar e gravar com o microfone.
+- [ ] **Claude:** animar o corte v5 com a ficha do jogador, o campinho e a conta por jogo.
+- [ ] **Dono:** dizer se ouve a trilha no v4.
 - [ ] **Dono:** regravar a narração com o microfone, em ambiente abafado (a gravação atual tem ruído de fundo).
 - [ ] **Dono:** indicar 2 ou 3 canais de futebol que gosta, como referência de trilha e de visual.
 - [x] **Claude:** avaliar o pacote comprado inteiro (`docs/avaliacao-pacote-creator-ai.md`).
@@ -30,6 +34,7 @@
 ## Fase 2 — Roteiro do piloto pronto para gravar
 
 - [ ] **Claude:** pesquisar os pontos da lista "A conferir antes de gravar" do roteiro, em especial: desfecho da investigação de 2019 e resposta dos dirigentes; critério da dívida de 2019 x 2025; datas, placar e títulos.
+- [ ] **Claude:** passar o roteiro inteiro pela regra do contexto de futebol (quem, o que fez em campo, valeu a pena) e corrigir o valor em reais da dívida do Al Wahda (a fonte usa a cotação de 2020).
 - [ ] **Claude:** rever a estrutura do roteiro com `docs/metodo-conteudo.md` (três ganchos, pedido de inscrição no meio, segundo gancho perto de 60%).
 - [ ] **Dono:** revisar os fatos e reescrever o texto no seu jeito de falar.
 - [ ] **Dono:** definir o tema do segundo vídeo (entra no fecho do piloto).

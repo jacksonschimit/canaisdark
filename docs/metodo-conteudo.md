@@ -13,6 +13,17 @@ Como escolher tema, escrever título, estruturar roteiro e fazer miniatura. Reú
 
 Coleta de dados: à mão (copiar título, views, inscritos) ou pelo Apify, se o dono decidir conectar.
 
+## 1.1 Contexto de futebol em todo número
+
+Regra do dono: o canal fala com torcedor, não com contador. Para cada valor que aparece, o roteiro responde:
+
+- **Quem?** Nome do jogador, técnico ou dirigente, e de onde veio.
+- **O que fez em campo?** Jogos, gols, títulos, lesões, se foi titular.
+- **Valeu a pena?** Uma conta simples que o torcedor entende: custo por jogo, por gol, por ponto.
+- **E daí?** A frase que provoca reação ("só o Cruzeiro mesmo" ou "o negócio era bom, o problema foi não pagar").
+
+Exemplo: `roteiros/001-cruzeiro/corte-menos6-texto-v2.md`.
+
 ## 2. Título
 
 - Até cerca de 60 caracteres (Shorts: 40).
