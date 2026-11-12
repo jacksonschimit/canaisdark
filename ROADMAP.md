@@ -11,7 +11,9 @@
 - [x] **Dono:** criar o repositório no GitHub.
 - [x] **Claude:** registrar contexto, visão, regras e este roadmap no repositório.
 
-## Fase 1 — Teste do formato (estamos aqui)
+## Fase 1 — Teste do formato (concluída em 12/11/2026)
+
+Resultado: provado que o projeto produz vídeo animado com narração, legenda, escudos e trilha. Decisão do dono: não investir mais no corte de teste e partir para o canal.
 
 - [x] **Claude:** corte de demonstração de 30 segundos em animação gráfica (`demos/001-cruzeiro-corte-menos6-v1.mp4`), sem áudio, com tempos estimados.
 - [x] **Dono:** gravar a narração desse corte e enviar o arquivo.
@@ -24,14 +26,16 @@
 - [x] **Claude:** registrar o método aproveitado do pacote comprado (`docs/metodo-conteudo.md`).
 - [x] **Dono:** retorno do v3: falta contexto de futebol; está raso, só número e gráfico.
 - [x] **Claude:** pesquisar o volante e propor o texto v2 do corte, com currículo e desempenho em campo (`roteiros/001-cruzeiro/corte-menos6-texto-v2.md`).
-- [ ] **Dono:** conferir os pontos em aberto do texto v2 (principalmente o número de jogos), ajustar ao seu jeito de falar e gravar com o microfone.
-- [ ] **Claude:** animar o corte v5 com a ficha do jogador, o campinho e a conta por jogo.
-- [ ] **Dono:** dizer se ouve a trilha no v4.
-- [ ] **Dono:** regravar a narração com o microfone, em ambiente abafado (a gravação atual tem ruído de fundo).
+- [x] Corte de teste encerrado. O texto v2 e a pesquisa do volante serão aproveitados no vídeo longo e nos cortes do piloto.
+- [ ] **Dono:** dizer se ouve a trilha no v4 (vale para o vídeo longo).
 - [ ] **Dono:** indicar 2 ou 3 canais de futebol que gosta, como referência de trilha e de visual.
 - [x] **Claude:** avaliar o pacote comprado inteiro (`docs/avaliacao-pacote-creator-ai.md`).
 
-## Fase 2 — Roteiro do piloto pronto para gravar
+## Fase 2 — Plano do canal e roteiro do piloto (estamos aqui)
+
+- [x] **Claude:** propor o plano do canal: formato do vídeo, cortes, embalagem, semana de produção, fila de temas (`docs/plano-do-canal.md`).
+- [ ] **Dono:** aprovar ou ajustar o plano e responder as decisões da seção 7 (nome do canal, segundo tema, duração, frequência, canais de referência).
+- [ ] **Claude:** reescrever o roteiro do Cruzeiro na estrutura do plano, com ficha e "valeu a pena?" para cada personagem.
 
 - [ ] **Claude:** pesquisar os pontos da lista "A conferir antes de gravar" do roteiro, em especial: desfecho da investigação de 2019 e resposta dos dirigentes; critério da dívida de 2019 x 2025; datas, placar e títulos.
 - [ ] **Claude:** passar o roteiro inteiro pela regra do contexto de futebol (quem, o que fez em campo, valeu a pena) e corrigir o valor em reais da dívida do Al Wahda (a fonte usa a cotação de 2020).
@@ -47,7 +51,7 @@
 - [ ] **Claude:** roteiro marcado → lista de cenas → vídeo, com os tempos vindos da transcrição.
 - [ ] **Claude:** trilha e efeitos sonoros com licença segura (biblioteca de áudio do YouTube).
 - [ ] **Claude:** geração dos 3 a 5 cortes verticais a partir do vídeo longo.
-- [ ] **Dono:** gravar a narração completa do piloto (9 a 10 minutos).
+- [ ] **Dono:** gravar a narração completa do piloto, com o microfone, em ambiente abafado.
 - [ ] **Claude + Dono:** montar, revisar e aprovar o piloto.
 
 ## Fase 4 — Criação do canal
