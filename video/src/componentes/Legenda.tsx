@@ -1,58 +1,51 @@
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { COR, FONTE, rampa } from "../estilo/tema";
 
-type Fala = { inicio: number; fim: number; texto: string };
 type Palavra = { texto: string; inicio: number; fim: number };
 type Bloco = { palavras: Palavra[]; inicio: number; fim: number };
 
-const MAX_CARACTERES = 30;
+const MAX_CARACTERES = 28;
+const tamanho = (ps: Palavra[]) => ps.reduce((s, p) => s + p.texto.length + 1, 0);
 
-/** Divide as falas em blocos curtos, com um tempo estimado por palavra. */
-const montarBlocos = (falas: Fala[]): Bloco[] => {
-  const blocos: Bloco[] = [];
-  for (const fala of falas) {
-    const textos = fala.texto.split(" ");
-    const total = textos.reduce((s, p) => s + p.length + 1, 0);
-    let cursor = fala.inicio;
-    const palavras = textos.map((texto) => {
-      const dur = ((texto.length + 1) / total) * (fala.fim - fala.inicio);
-      const p = { texto, inicio: cursor, fim: cursor + dur };
-      cursor += dur;
-      return p;
-    });
-
-    // Reparte a fala em blocos de tamanho parecido, para não sobrar palavra sozinha.
-    const nBlocos = Math.ceil(total / MAX_CARACTERES);
-    const alvo = total / nBlocos + 4;
-    let atual: Palavra[] = [];
-    let tamanho = 0;
-    const fechar = () => {
-      if (atual.length === 0) return;
-      blocos.push({
-        palavras: atual,
-        inicio: atual[0].inicio,
-        fim: atual[atual.length - 1].fim,
-      });
-      atual = [];
-      tamanho = 0;
-    };
-    for (const p of palavras) {
-      if (tamanho + p.texto.length > alvo) fechar();
-      atual.push(p);
-      tamanho += p.texto.length + 1;
-    }
-    fechar();
-    // O último bloco da fala fica um instante a mais na tela.
-    blocos[blocos.length - 1].fim += 0.3;
+/** Agrupa as palavras em blocos curtos: quebra em fim de frase e reparte frases longas por igual. */
+const montarBlocos = (palavras: Palavra[]): Bloco[] => {
+  const frases: Palavra[][] = [[]];
+  for (const p of palavras) {
+    frases[frases.length - 1].push(p);
+    if (/[.!?]$/.test(p.texto)) frases.push([]);
   }
-  return blocos;
+
+  const grupos: Palavra[][] = [];
+  for (const frase of frases.filter((f) => f.length > 0)) {
+    const alvo = tamanho(frase) / Math.ceil(tamanho(frase) / MAX_CARACTERES) + 4;
+    let atual: Palavra[] = [];
+    for (const p of frase) {
+      if (atual.length > 0 && tamanho(atual) + p.texto.length > alvo) {
+        grupos.push(atual);
+        atual = [];
+      }
+      atual.push(p);
+    }
+    grupos.push(atual);
+  }
+
+  // Cada bloco fica na tela até o próximo começar; em pausa longa, some um pouco depois da fala.
+  return grupos.map((g, i) => {
+    const fimDaFala = g[g.length - 1].fim;
+    const proximo = grupos[i + 1]?.[0].inicio ?? Infinity;
+    return {
+      palavras: g,
+      inicio: g[0].inicio,
+      fim: proximo - fimDaFala < 0.7 ? proximo : fimDaFala + 0.45,
+    };
+  });
 };
 
-export const Legenda = ({ falas }: { falas: Fala[] }) => {
+export const Legenda = ({ palavras }: { palavras: Palavra[] }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const bloco = montarBlocos(falas).find((b) => t >= b.inicio && t < b.fim);
+  const bloco = montarBlocos(palavras).find((b) => t >= b.inicio && t < b.fim);
   if (!bloco) return null;
 
   const entrada = rampa(t, bloco.inicio, bloco.inicio + 0.12);
@@ -84,8 +77,9 @@ export const Legenda = ({ falas }: { falas: Fala[] }) => {
         }}
       >
         {bloco.palavras.map((p, i) => {
+          const proxima = bloco.palavras[i + 1]?.inicio ?? Infinity;
           const falada = t >= p.inicio;
-          const atual = t >= p.inicio && t < p.fim;
+          const atual = falada && t < proxima;
           return (
             <span
               key={i}

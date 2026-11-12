@@ -43,6 +43,16 @@ Detalhes e pesquisa: `docs/contexto-inicial.md`.
 - `roteiros/NNN-tema/`: roteiro e fontes de cada vídeo.
 - `video/`: projeto Remotion (animações). Tema visual em `video/src/estilo/tema.ts`; cada corte tem um arquivo de dados (falas, tempos, números) separado do arquivo de animação.
 - `demos/`: vídeos de demonstração renderizados.
+- `ferramentas/`: scripts do pipeline de áudio. `tratar_audio.sh` (limpa e nivela a gravação), `transcrever.py` (Whisper, tempo por palavra; precisa de `pip install faster-whisper`), `aplicar_cortes.py` (remove erros de fala e ajusta os tempos).
+- `gravacoes/brutas/`: narrações originais do dono. As tratadas são geradas de novo pelos scripts e não vão para o git.
+
+## Da gravação ao vídeo
+
+1. `ferramentas/tratar_audio.sh gravacoes/brutas/X.m4a gravacoes/tratadas/X.wav`
+2. `python3 ferramentas/transcrever.py gravacoes/tratadas/X.wav palavras.json`
+3. Se houver erro de fala: `ferramentas/aplicar_cortes.py` com os trechos a remover.
+4. Áudio final em `video/public/`; palavras em `video/src/cortes/<corte>.palavras.json`, com o texto revisado à mão (nomes próprios, pontuação).
+5. As cenas e a legenda usam `marca("palavra")` para entrar no momento em que a palavra é dita.
 
 ## Como renderizar
 

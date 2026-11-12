@@ -2,5 +2,5 @@ node_modules/
 video/out/
 .DS_Store
 *.log
-# gravações brutas são grandes; ficam fora do git
-gravacoes/brutas/
+# áudio tratado é gerado de novo pelos scripts
+gravacoes/tratadas/

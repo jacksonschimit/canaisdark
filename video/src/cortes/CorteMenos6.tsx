@@ -1,9 +1,17 @@
 import type { CSSProperties, ReactNode } from "react";
-import { Sequence, useCurrentFrame, useVideoConfig } from "remotion";
+import { Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Legenda } from "../componentes/Legenda";
 import { Moldura } from "../componentes/Moldura";
 import { batida, COR, FONTE, milhar, rampa } from "../estilo/tema";
-import { CENAS, DURACAO_S, FALAS, NUM } from "./menos6.dados";
+import {
+  ATRASO_AUDIO_S,
+  AUDIO,
+  CENAS,
+  DURACAO_S,
+  marca,
+  NUM,
+  PALAVRAS,
+} from "./menos6.dados";
 
 const useT = () => {
   const frame = useCurrentFrame();
@@ -50,10 +58,11 @@ const Palco = ({
 // ───────────────────────── Cena 1: o gancho ─────────────────────────
 const Gancho = ({ dur }: { dur: number }) => {
   const { t, fps } = useT();
-  const valor = rampa(t, 0.25, 2.3, 0, NUM.dividaTotalMi);
-  const encolhe = rampa(t, 3.1, 3.6);
-  const punido = rampa(t, 3.4, 3.8);
-  const cinco = batida(t, fps, 4.9);
+  const m = (texto: string, n = 1) => marca(texto, n) - CENAS.gancho;
+  const valor = rampa(t, 0.25, m("reais"), 0, NUM.dividaTotalMi);
+  const encolhe = rampa(t, m("E") - 0.1, m("E") + 0.4);
+  const punido = rampa(t, m("punido") - 0.1, m("punido") + 0.3);
+  const cinco = batida(t, fps, m("cinco"));
 
   return (
     <Palco dur={dur}>
@@ -170,13 +179,14 @@ const Linha = ({
 
 const Emprestimo = ({ dur }: { dur: number }) => {
   const { t, fps } = useT();
-  const ano = batida(t, fps, 0.2);
-  const cartao = rampa(t, 0.9, 1.4);
-  const seta = rampa(t, 2.6, 3.6);
-  const carimbo = batida(t, fps, 5.1);
-  const linhaValor = rampa(t, 6.7, 7.0);
-  const euros = rampa(t, 6.9, 8.3, 0, NUM.dividaAlWahdaEur);
-  const reais = rampa(t, 9.2, 9.6);
+  const m = (texto: string, n = 1) => marca(texto, n) - CENAS.emprestimo;
+  const ano = batida(t, fps, m("2016"));
+  const cartao = rampa(t, m("Cruzeiro") - 0.2, m("Cruzeiro") + 0.3);
+  const seta = rampa(t, m("emprestado"), m("volante") + 0.3);
+  const carimbo = batida(t, fps, m("pagou") - 0.1);
+  const linhaValor = rampa(t, m("dívida"), m("dívida") + 0.3);
+  const euros = rampa(t, m("850"), m("euros") + 0.2, 0, NUM.dividaAlWahdaEur);
+  const reais = rampa(t, m("pouco"), m("pouco") + 0.4);
 
   const clube: CSSProperties = {
     fontFamily: FONTE.titulo,
@@ -336,11 +346,13 @@ const Etiqueta = ({ children, cor }: { children: ReactNode; cor: string }) => (
 
 const Punicao = ({ dur }: { dur: number }) => {
   const { t, fps } = useT();
-  const seta = rampa(t, 0.5, 1.4);
-  const fifa = batida(t, fps, 1.3);
-  const tabela = rampa(t, 2.4, 2.9);
-  const queda = rampa(t, 5.0, 5.7);
-  const menos6 = batida(t, fps, 5.6);
+  const m = (texto: string, n = 1) => marca(texto, n) - CENAS.punicao;
+  const seta = rampa(t, m("então"), m("FIFA") + 0.1);
+  const fifa = batida(t, fps, m("FIFA"));
+  const tabela = rampa(t, m("O", 2) - 0.1, m("O", 2) + 0.4);
+  const inicioTabela = m("O", 2);
+  const queda = rampa(t, m("seis") - 0.15, m("seis") + 0.5);
+  const menos6 = batida(t, fps, m("seis") + 0.3);
 
   const ZERO_Y = 500;
   const PASSO = 62; // pixels por ponto
@@ -405,7 +417,7 @@ const Punicao = ({ dur }: { dur: number }) => {
               height: 30,
               borderRadius: 15,
               background: COR.apagado,
-              opacity: rampa(t, 2.6 + i * 0.03, 2.9 + i * 0.03),
+              opacity: rampa(t, inicioTabela + i * 0.03, inicioTabela + 0.3 + i * 0.03),
             }}
           />
         ))}
@@ -532,8 +544,9 @@ const Escala = ({ dur }: { dur: number }) => {
   const ladoMenor = LADO * Math.sqrt(NUM.dividaAlWahdaMi / NUM.dividaTotalMi);
   const grande = rampa(t, 0.05, 0.6);
   const pequeno = batida(t, fps, 0.8);
-  const frase1 = rampa(t, 0.2, 0.6);
-  const frase2 = batida(t, fps, 2.3);
+  const m = (texto: string, n = 1) => marca(texto, n) - CENAS.escala;
+  const frase1 = rampa(t, m("Não"), m("Não") + 0.4);
+  const frase2 = batida(t, fps, m("Era"));
 
   return (
     <Palco dur={dur + 1}>
@@ -651,7 +664,10 @@ export const CorteMenos6 = () => {
           <Cena dur={fim - inicio} />
         </Sequence>
       ))}
-      <Legenda falas={FALAS} />
+      <Legenda palavras={PALAVRAS} />
+      <Sequence from={Math.round(ATRASO_AUDIO_S * fps)}>
+        <Audio src={staticFile(AUDIO)} />
+      </Sequence>
     </Moldura>
   );
 };
