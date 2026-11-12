@@ -16,6 +16,7 @@ A automação serve à produção, nunca substitui a autoria. O YouTube desmonet
 - revisão dos fatos e do texto pelo dono antes de gravar;
 - narração na voz do próprio dono (sem voz sintética);
 - estilo visual próprio e consistente, feito para o canal, sem moldes comprados;
+- o visual tem que ter cara de futebol (escudos, cores do clube), não de apresentação de negócios nem de ferramenta de IA;
 - nada de copiar o formato de um vídeo que "estourou";
 - antes de automatizar uma etapa, perguntar: isso tira o toque humano que protege o canal? Se sim, automatiza-se o trabalho braçal e mantém-se a decisão com o dono.
 
@@ -33,7 +34,9 @@ Detalhes e pesquisa: `docs/contexto-inicial.md`.
 - Todo número e toda data têm fonte no roteiro.
 - Acusação contra pessoa real só com base documentada, sempre atribuída, com o desfecho e a resposta do citado. Investigado não é condenado.
 - Evitar líderes políticos em atividade.
-- Não usar lance de jogo, imagem de transmissão de TV nem escudo de clube.
+- Não usar lance de jogo nem imagem de transmissão de TV.
+- Escudos de clubes e símbolos de entidades podem aparecer para identificar de quem se fala (decisão do dono em 12/11/2026: o público de futebol se reconhece no escudo). São marcas registradas: uso só editorial, sem alterar o desenho e sem sugerir vínculo ou apoio. Registrar a origem de cada arquivo em `video/public/escudos/ORIGEM.md`.
+- Trilha de fundo sempre baixa, atrás da voz. Só música própria (`ferramentas/trilha_suspense.py`) ou com licença explícita.
 - Não dar recomendação de investimento.
 
 ## Onde está cada coisa
@@ -41,7 +44,7 @@ Detalhes e pesquisa: `docs/contexto-inicial.md`.
 - `ROADMAP.md`: a sequência de passos do projeto e o estado de cada um. **Atualizar sempre que um passo for concluído ou mudar.**
 - `docs/`: contexto, pesquisa e decisões.
 - `roteiros/NNN-tema/`: roteiro e fontes de cada vídeo.
-- `video/`: projeto Remotion (animações). Tema visual em `video/src/estilo/tema.ts`; cada corte tem um arquivo de dados (falas, tempos, números) separado do arquivo de animação.
+- `video/`: projeto Remotion (animações). Tema visual em `video/src/estilo/tema.ts` (a cor `clube` muda a cada episódio); escudo e moeda em `video/src/componentes/Simbolos.tsx`; cada corte tem um arquivo de dados (falas, tempos, números) separado do arquivo de animação.
 - `demos/`: vídeos de demonstração renderizados.
 - `ferramentas/`: scripts do pipeline de áudio. `tratar_audio.sh` (limpa e nivela a gravação), `transcrever.py` (Whisper, tempo por palavra; precisa de `pip install faster-whisper`), `aplicar_cortes.py` (remove erros de fala e ajusta os tempos).
 - `gravacoes/brutas/`: narrações originais do dono. As tratadas são geradas de novo pelos scripts e não vão para o git.

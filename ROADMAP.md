@@ -14,11 +14,15 @@
 ## Fase 1 — Teste do formato (estamos aqui)
 
 - [x] **Claude:** corte de demonstração de 30 segundos em animação gráfica (`demos/001-cruzeiro-corte-menos6-v1.mp4`), sem áudio, com tempos estimados.
-- [ ] **Dono:** dizer o que muda no visual (ritmo, cores, tamanho de letra, estilo). Decidir se o curso "Estúdio de Vídeos" é dispensado.
 - [x] **Dono:** gravar a narração desse corte e enviar o arquivo.
 - [x] **Claude:** tratamento de áudio (ruído, volume, silêncios) e transcrição com tempo por palavra (`ferramentas/`).
 - [x] **Claude:** sincronizar animação e legenda com a voz real e entregar o corte v2, com áudio (`demos/001-cruzeiro-corte-menos6-v2.mp4`).
-- [ ] **Dono:** assistir ao v2 e aprovar o formato, ou pedir ajustes. Só então seguimos para o vídeo longo.
+- [x] **Dono:** assistir ao v2 e pedir ajustes (paleta com cara de IA, faltavam escudos, cifrão e trilha de fundo).
+- [x] **Claude:** corte v3 com paleta nova na cor do clube, escudos, moeda com cifrão, trilha de suspense e batidas (`demos/001-cruzeiro-corte-menos6-v3.mp4`).
+- [ ] **Dono:** assistir ao v3 e aprovar o formato, ou pedir ajustes. Só então seguimos para o vídeo longo.
+- [ ] **Dono:** regravar a narração com o microfone, em ambiente abafado (a gravação atual tem ruído de fundo).
+- [ ] **Dono:** indicar 2 ou 3 canais de futebol que gosta, como referência de trilha e de visual.
+- [ ] **Claude:** avaliar o pacote comprado ("Máquina de Viralização") e dizer o que serve ao projeto.
 
 ## Fase 2 — Roteiro do piloto pronto para gravar
 

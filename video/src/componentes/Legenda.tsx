@@ -69,7 +69,7 @@ export const Legenda = ({ palavras }: { palavras: Palavra[] }) => {
         style={{
           fontFamily: FONTE.texto,
           fontWeight: 800,
-          fontSize: 60,
+          fontSize: 58,
           lineHeight: 1.22,
           textAlign: "center",
           letterSpacing: -0.5,
@@ -84,7 +84,7 @@ export const Legenda = ({ palavras }: { palavras: Palavra[] }) => {
             <span
               key={i}
               style={{
-                color: atual ? COR.amarelo : COR.papel,
+                color: atual ? COR.ouro : COR.branco,
                 opacity: falada ? 1 : 0.38,
               }}
             >

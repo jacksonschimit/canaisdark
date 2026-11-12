@@ -1,20 +1,22 @@
 import { Easing, interpolate, spring } from "remotion";
 
-// Identidade visual provisória ("dossiê financeiro"). Trocar aqui muda o canal inteiro.
+// Identidade visual do canal. Trocar aqui muda todos os vídeos.
+// `clube` é a cor do clube do episódio (aqui, o azul do Cruzeiro): muda a cada vídeo.
 export const COR = {
-  fundo: "#0C1310",
-  papel: "#F3ECDD",
-  tinta: "#141A17",
-  apagado: "#8C978F",
-  vermelho: "#FF4F3D",
-  amarelo: "#FFD84A",
-  linha: "rgba(243,236,221,0.07)",
+  fundo: "#050816",
+  clube: "#2F5FE0",
+  clubeEscuro: "#0E1F5C",
+  branco: "#FFFFFF",
+  tinta: "#0A1024",
+  apagado: "#9AA8CF",
+  vermelho: "#FF3B47",
+  ouro: "#FFC42E",
 };
 
 export const FONTE = {
   titulo: '"Anton", sans-serif',
-  mono: '"IBM Plex Mono", monospace',
-  texto: '"Inter", sans-serif',
+  rotulo: '"Barlow Condensed", sans-serif',
+  texto: '"Montserrat", sans-serif',
 };
 
 /** Vai de `de` a `para` entre os segundos a e b, com desaceleração. */
