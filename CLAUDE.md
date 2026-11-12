@@ -21,6 +21,10 @@ A automação serve à produção, nunca substitui a autoria. O YouTube desmonet
 - nada de copiar o formato de um vídeo que "estourou";
 - antes de automatizar uma etapa, perguntar: isso tira o toque humano que protege o canal? Se sim, automatiza-se o trabalho braçal e mantém-se a decisão com o dono.
 
+## Como o dono e o Claude dividem o trabalho
+
+O Claude pesquisa e traz opções com recomendação; o dono decide e grava. Não devolver ao dono uma pergunta aberta ("qual tema você quer?"): levar de duas a quatro opções, com prós, contras e uma recomendação. Decisões em aberto ficam em `docs/decisoes-pendentes.md`.
+
 ## Decisões já tomadas (não reabrir)
 
 - Nicho: "o negócio do futebol" (o lado do dinheiro, contado como história).

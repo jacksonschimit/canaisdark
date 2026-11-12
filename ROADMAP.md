@@ -34,7 +34,8 @@ Resultado: provado que o projeto produz vídeo animado com narração, legenda, 
 ## Fase 2 — Plano do canal e roteiro do piloto (estamos aqui)
 
 - [x] **Claude:** propor o plano do canal: formato do vídeo, cortes, embalagem, semana de produção, fila de temas (`docs/plano-do-canal.md`).
-- [ ] **Dono:** aprovar ou ajustar o plano e responder as decisões da seção 7 (nome do canal, segundo tema, duração, frequência, canais de referência).
+- [x] **Claude:** levar ao dono as decisões com opções e recomendação (`docs/decisoes-pendentes.md`).
+- [ ] **Dono:** responder as decisões 1 a 5; definir nome, cores e canais de referência.
 - [ ] **Claude:** reescrever o roteiro do Cruzeiro na estrutura do plano, com ficha e "valeu a pena?" para cada personagem.
 
 - [ ] **Claude:** pesquisar os pontos da lista "A conferir antes de gravar" do roteiro, em especial: desfecho da investigação de 2019 e resposta dos dirigentes; critério da dívida de 2019 x 2025; datas, placar e títulos.
