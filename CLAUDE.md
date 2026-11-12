@@ -1,0 +1,57 @@
+# Canais Dark
+
+Projeto pessoal do dono do repositório. Idioma de trabalho: português do Brasil.
+
+## Objetivo final
+
+Uma **máquina de criação de vídeos**: roteiro, narração, montagem do vídeo, cortes, publicação e, se possível, acompanhamento dos números do canal, com o máximo de automação e o mínimo de trabalho manual do dono. Meta de negócio: um canal sem rosto no YouTube, monetizado por anúncios.
+
+Construímos ferramentas próprias aqui no repositório e adotamos ferramentas de terceiros quando reduzirem trabalho.
+
+## Limite que não se negocia: não virar "lixo de IA"
+
+A automação serve à produção, nunca substitui a autoria. O YouTube desmonetiza e encerra canais de conteúdo "inautêntico": em série, de molde, sem curadoria, duplicado ou robotizado. Por isso, em todo vídeo:
+
+- roteiro original, com pesquisa e fonte para cada número e data;
+- revisão dos fatos e do texto pelo dono antes de gravar;
+- narração na voz do próprio dono (sem voz sintética);
+- estilo visual próprio e consistente, feito para o canal, sem moldes comprados;
+- nada de copiar o formato de um vídeo que "estourou";
+- antes de automatizar uma etapa, perguntar: isso tira o toque humano que protege o canal? Se sim, automatiza-se o trabalho braçal e mantém-se a decisão com o dono.
+
+## Decisões já tomadas (não reabrir)
+
+- Nicho: "o negócio do futebol" (o lado do dinheiro, contado como história).
+- Um canal só para começar; trocar de nicho só com base em números.
+- Vídeo longo é o produto principal; cortes verticais (Shorts, Reels, TikTok) trazem público.
+- Orçamento máximo: R$ 200 por mês.
+
+Detalhes e pesquisa: `docs/contexto-inicial.md`.
+
+## Regras de conteúdo
+
+- Todo número e toda data têm fonte no roteiro.
+- Acusação contra pessoa real só com base documentada, sempre atribuída, com o desfecho e a resposta do citado. Investigado não é condenado.
+- Evitar líderes políticos em atividade.
+- Não usar lance de jogo, imagem de transmissão de TV nem escudo de clube.
+- Não dar recomendação de investimento.
+
+## Onde está cada coisa
+
+- `ROADMAP.md`: a sequência de passos do projeto e o estado de cada um. **Atualizar sempre que um passo for concluído ou mudar.**
+- `docs/`: contexto, pesquisa e decisões.
+- `roteiros/NNN-tema/`: roteiro e fontes de cada vídeo.
+- `video/`: projeto Remotion (animações). Tema visual em `video/src/estilo/tema.ts`; cada corte tem um arquivo de dados (falas, tempos, números) separado do arquivo de animação.
+- `demos/`: vídeos de demonstração renderizados.
+
+## Como renderizar
+
+```bash
+cd video && npm install
+```
+
+```bash
+npx remotion render src/index.ts CorteMenos6 ../demos/saida.mp4
+```
+
+Nas sessões em nuvem do Claude Code, acrescentar `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`.
