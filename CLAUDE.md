@@ -42,7 +42,7 @@ Detalhes e pesquisa: `docs/contexto-inicial.md`.
 ## Onde está cada coisa
 
 - `ROADMAP.md`: a sequência de passos do projeto e o estado de cada um. **Atualizar sempre que um passo for concluído ou mudar.**
-- `docs/`: contexto, pesquisa e decisões.
+- `docs/`: contexto, pesquisa e decisões. `docs/metodo-conteudo.md` é o método para tema, título, estrutura de roteiro e miniatura: **consultar antes de escrever qualquer roteiro ou título.**
 - `roteiros/NNN-tema/`: roteiro e fontes de cada vídeo.
 - `video/`: projeto Remotion (animações). Tema visual em `video/src/estilo/tema.ts` (a cor `clube` muda a cada episódio); escudo e moeda em `video/src/componentes/Simbolos.tsx`; cada corte tem um arquivo de dados (falas, tempos, números) separado do arquivo de animação.
 - `demos/`: vídeos de demonstração renderizados.

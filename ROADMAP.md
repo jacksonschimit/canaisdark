@@ -19,7 +19,10 @@
 - [x] **Claude:** sincronizar animação e legenda com a voz real e entregar o corte v2, com áudio (`demos/001-cruzeiro-corte-menos6-v2.mp4`).
 - [x] **Dono:** assistir ao v2 e pedir ajustes (paleta com cara de IA, faltavam escudos, cifrão e trilha de fundo).
 - [x] **Claude:** corte v3 com paleta nova na cor do clube, escudos, moeda com cifrão, trilha de suspense e batidas (`demos/001-cruzeiro-corte-menos6-v3.mp4`).
-- [ ] **Dono:** assistir ao v3 e aprovar o formato, ou pedir ajustes. Só então seguimos para o vídeo longo.
+- [x] **Dono:** assistir ao v3. Primeiro retorno: a trilha de fundo não se ouvia.
+- [x] **Claude:** corte v4 com a trilha mais alta e mais presente nos médios (`demos/001-cruzeiro-corte-menos6-v4.mp4`).
+- [x] **Claude:** registrar o método aproveitado do pacote comprado (`docs/metodo-conteudo.md`).
+- [ ] **Dono:** dar o retorno completo do visual (v3/v4) e dizer se agora ouve a trilha. Aprovar o formato ou pedir ajustes.
 - [ ] **Dono:** regravar a narração com o microfone, em ambiente abafado (a gravação atual tem ruído de fundo).
 - [ ] **Dono:** indicar 2 ou 3 canais de futebol que gosta, como referência de trilha e de visual.
 - [x] **Claude:** avaliar o pacote comprado inteiro (`docs/avaliacao-pacote-creator-ai.md`).
@@ -27,6 +30,7 @@
 ## Fase 2 — Roteiro do piloto pronto para gravar
 
 - [ ] **Claude:** pesquisar os pontos da lista "A conferir antes de gravar" do roteiro, em especial: desfecho da investigação de 2019 e resposta dos dirigentes; critério da dívida de 2019 x 2025; datas, placar e títulos.
+- [ ] **Claude:** rever a estrutura do roteiro com `docs/metodo-conteudo.md` (três ganchos, pedido de inscrição no meio, segundo gancho perto de 60%).
 - [ ] **Dono:** revisar os fatos e reescrever o texto no seu jeito de falar.
 - [ ] **Dono:** definir o tema do segundo vídeo (entra no fecho do piloto).
 - [ ] **Claude:** fechar o roteiro v2 com as fontes conferidas.
