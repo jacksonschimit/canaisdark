@@ -35,7 +35,8 @@ Resultado: provado que o projeto produz vídeo animado com narração, legenda, 
 
 - [x] **Claude:** propor o plano do canal: formato do vídeo, cortes, embalagem, semana de produção, fila de temas (`docs/plano-do-canal.md`).
 - [x] **Claude:** levar ao dono as decisões com opções e recomendação (`docs/decisoes-pendentes.md`).
-- [ ] **Dono:** responder as decisões 1 a 5; definir nome, cores e canais de referência.
+- [ ] **Dono:** responder as decisões 1 a 6 (`docs/decisoes-pendentes.md`); definir nome e cores.
+- [ ] **Dono + Claude:** analisar o Peleja e os canais parecidos listados em `docs/referencias.md`.
 - [ ] **Claude:** reescrever o roteiro do Cruzeiro na estrutura do plano, com ficha e "valeu a pena?" para cada personagem.
 
 - [ ] **Claude:** pesquisar os pontos da lista "A conferir antes de gravar" do roteiro, em especial: desfecho da investigação de 2019 e resposta dos dirigentes; critério da dívida de 2019 x 2025; datas, placar e títulos.
