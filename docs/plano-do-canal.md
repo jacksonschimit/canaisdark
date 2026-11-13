@@ -78,15 +78,9 @@ Tempo do dono estimado: 3 a 4 horas por semana, a maior parte na revisão e na g
 
 Quinta à noite e os dias dos cortes são ponto de partida. Evitar publicar na hora de jogo grande. Ajustar pelos dados do YouTube Studio depois de 4 a 6 vídeos.
 
-## 6. Fila de temas (sugestão, a validar com pesquisa)
+## 6. Fila de temas
 
-1. Cruzeiro: de bicampeão a rebaixado (piloto, roteiro v1 pronto)
-2. E se o Flamengo não tivesse arrumado as dívidas em 2013?
-3. Parmalat e Palmeiras: para onde foi o dinheiro?
-4. Quanto o Santos realmente ganhou com a venda do Neymar?
-5. Por que os clubes brasileiros estão virando empresa?
-
-Os temas 2 a 5 vieram da primeira conversa e ainda não têm pesquisa. A ordem deve seguir o método: ver o que se destaca no nicho e o que o público pede.
+A fila atual, com a avaliação de cada tema e a ordem proposta, está em `docs/decisoes-pendentes.md`, decisão 6. Inclui os três temas sugeridos pelo dono em 13/11/2026 (Memphis no Corinthians, Grêmio 2021 e São Paulo).
 
 ## 7. Decisões que faltam do dono
 
