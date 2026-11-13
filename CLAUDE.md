@@ -47,6 +47,7 @@ Detalhes e pesquisa: `docs/contexto-inicial.md`.
 ## Onde está cada coisa
 
 - `docs/plano-do-canal.md`: como é um vídeo do canal (estrutura, quadros recorrentes, embalagem) e a semana de produção.
+- `docs/referencias.md`: canais que o dono usa como referência e o que observar em cada um.
 - `ROADMAP.md`: a sequência de passos do projeto e o estado de cada um. **Atualizar sempre que um passo for concluído ou mudar.**
 - `docs/`: contexto, pesquisa e decisões. `docs/metodo-conteudo.md` é o método para tema, título, estrutura de roteiro e miniatura: **consultar antes de escrever qualquer roteiro ou título.**
 - `roteiros/NNN-tema/`: roteiro e fontes de cada vídeo.
